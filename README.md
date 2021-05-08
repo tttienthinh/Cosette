@@ -1,8 +1,7 @@
 ---
 title: Cosette Token
 date: '2021/05'
-author:
-- 'TRAN-THUONG Tien-Thinh'
+author: 'TRAN-THUONG Tien-Thinh'
 ---
 
 # Abstract:
