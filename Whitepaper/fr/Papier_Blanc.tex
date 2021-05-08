@@ -1,0 +1,83 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+
+% TITLE
+\title{Cosette Token}
+
+% AUTHORS
+\author{TRAN-THUONG Tien-Thinh}
+
+
+% DATE
+\date{2021/05}
+
+\begin{document}
+\maketitle
+
+% ABSTRACT
+\begin{abstract}
+Nous utilisons tous les réseaux sociaux. Certains postent régulièrement et ont beaucoup d'amis qui les suivent. Instagram est l'un de ses réseaux dont la majorité a entre 18 et 34 ans. Un public jeune, souvent interessé par la cryptomonnaie et qui souhaite souvent avoir un complément de revenu à partir de leur activité sur Instagram. Cependant les agences de marketing sur les réseaux sociaux ne cherchent souvent que des comptes avec un minimum de suiveurs pour leur proposer des posts rémunérer.
+\end{abstract}
+
+% MAIN BODY
+\section{Introduction}
+Nous pensons qu'il est plus avantageux pour les entreprises à la recherche d'un poste viral, que celui-ci soit poster par plusieurs "petits" comptes plutôt qu'un "gros" compte d'influenceur. En effet, les plus petits comptes sont en majorité suivie par des amis et des proches, ce qui en fait une audience plus à l'écoute. Notre service permet donc aux entreprises de lancer une campagne de publicité sur un certain temps, et à la date butoir, les comptes ayant participé en postant l'image recevront une quantité de Token proportionnellement à leur taux d'engagement sur le post.
+
+\section{Methods}
+Nous utiliserons pour cela le langage Solidity.  
+
+\subsection{Companies}
+Pour créer une campagne publicitaire les entreprises doivent :
+\begin{itemize}
+  \item Annoncer une somme $S$ de Token de récompense
+  \item Disposer de cette somme $S$ de Token
+  \item Déposer l'image/la photo et la description dont elle souhaite faire la promotion
+  \item Annoncer une date butoir pour la campagne
+\end{itemize}
+Il faut discuter sur les possibilités suivantes :
+\begin{itemize}
+  \item Retirer ou non la somme $S$ de Token de l'entreprise dès le lancement de la campagne, le smart contract le gardera ainsi jusqu'à la fin de la campagne pour la redistribution
+  \item La possibilité de reprendre une partie des fonds si la campagne n'a pas été à la hauteur des espérances
+  \item Enregistrer l'image dans une base de données ou sous forme de NFT directement dans la blockchain
+\end{itemize}
+
+\subsection{Participants}
+Pour participer à une campagne publicitaire les participants doivent :
+\begin{itemize}
+  \item Disposer d'un compte Instagram publique
+  \item Poster avant la date butoir l'image demandée
+  \item Renseigner une addresse ethereum pour recevoir le token
+  \item Faire de son mieux pour avoir des likes et des commentaires sur la photo
+\end{itemize}
+Une fois la date butoir passée, on réparti la somme de Token $S$ parmi les $n$ participants, chaque participant $k$ avec $l_k$ nombres de like reçoit ainsi :
+\begin{equation}
+t_k = S \times \frac{l_k}{\sum_{i=1}^{n}{l_i}}
+\end{equation}
+
+Il faut discuter sur les possibilités suivantes :
+\begin{itemize}
+  \item Comment lier un compte ethereum au compte Instagram afin qu'il n'y ait pas deux comptes ethereum qui se réclament avoir poster la même image
+\end{itemize}
+
+\section{Marketing}
+La phase la plus importante est bien évidemment de rendre le protocole connu. L'une des idées serait des air-drops directement avec le système créé. Pour se faire connaitre et alimenter les premiers flux de participants il est possible de leur proposer directement de poster une publicité Cosette Token.  
+Nous pouvons également faire une ICO pour ramener des fonds et interrésser de nouveaux investisseurs.  
+Pour récompenser les ingénieurs et ceux qui ont aidé la Cosette Token à se développer, il serait possible de prélever une commission pour chaque création de campagne, qui serait redistribué parmi les contributeurs.  
+Toutes ses manipulations justifieraient potentiellement la création d'un nouveau token, plutôt que la seule création d'une Dapp.
+
+
+\section*{Acknowledgements}
+Merci à celles et ceux qui ont participé à ce projet.
+
+% REFERENCE LIST
+\begin{thebibliography}{99}
+
+\bibitem{} \href{https://ethereum.org/en/whitepaper/}{Ethereum Whitepaper}
+\bibitem{} \href{https://github.com/tttienthinh/Cosette}{Github Link to the project}
+
+
+\end{thebibliography}
+
+%%% PRACE GENERIC LAYOUT; DO NOT CHANGE %%%
+\end{document}
+%%% END OF PRACE GENERIC LAYOUT %%%

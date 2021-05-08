@@ -1,0 +1,83 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+
+% TITLE
+\title{Cosette Token}
+
+% AUTHORS
+\author{TRAN-THUONG Tien-Thinh}
+
+
+% DATE
+\date{2021/05}
+
+\begin{document}
+\maketitle
+
+% ABSTRACT
+\begin{abstract}
+We all use social networks. Some post regularly and have many friends who follow them. Instagram is one of those networks where the majority are between 18 and 34 years old. A young audience, often interested in cryptocurrency and who often want to have an additional income from their activity on Instagram. However, social media marketing agencies only look for accounts with a minimum number of followers to offer them paid posts.
+\end{abstract}
+
+% MAIN BODY
+\section{Introduction}
+We believe that it is more advantageous for companies looking for a viral post to have it posted by several "small" accounts rather than one "big" influencer account. Indeed, the smaller accounts are mostly followed by friends and family, which makes them a more attentive audience. Our service therefore allows companies to launch an advertising campaign over a certain period of time, and at the deadline, the accounts that participated by posting the image will receive a quantity of tokens proportional to their engagement rate on the post.
+
+\section{Methods}
+We will use the Solidity language for this.  
+
+\subsection{Companies}
+
+To create an advertising campaign, companies must :
+\begin{itemize}
+  \item Fix an amount $S$ of reward tokens
+  \item Have this $S$ of token available
+  \item Submit the image/photo and description that they wish to promote
+  \item Announce a deadline for the campaign
+\end{itemize}
+Discuss the following possibilities:
+\begin{itemize}
+  \item Take or not the amount of $S$ of Token from the company as soon as the campaign is launched, the smart contract will keep it until the end of the campaign for the redistribution
+  \item The possibility for the company to take back part of the funds if the campaign did not meet expectations
+  \item Save the image in a database or as an NFT directly in the blockchain
+\end{itemize}
+
+\subsection{Participants}
+To participate in an advertising campaign, participants must:
+\begin{itemize}
+  \item Have a public Instagram account
+  \item Post the requested image by the deadline
+  \item Provide an ethereum address to receive the token
+  \item Do their best to get likes and comments on the picture
+\end{itemize}
+Once the deadline has passed, we distribute the sum of Token $S$ among the $n$ participants, each participant $k$ with $l_k$ number of likes receives thus :
+\begin{equation}
+t_k = S \times \frac{l_k}{\sum_{i=1}^{n}{l_i}}
+\end{equation}
+
+The following possibilities should be discussed:
+\begin{itemize}
+  \item How to link an ethereum account to the Instagram account so that there are not two ethereum accounts claiming to have posted the same image
+\end{itemize}
+
+\section{Marketing}
+The most important phase is of course to make the protocol known. One of the ideas would be air-drops directly with the created system. To get known and to feed the first flows of participants it is possible to propose to them directly to post an advertisement Cosette Token. \\
+We can also do an ICO to bring in funds and interest new investors.   \\ 
+To reward the engineers and those who helped the Cosette Token to develop, it would be possible to take a commission for each campaign creation, which would be redistributed among the contributors.  \\
+All these manipulations would potentially justify the creation of a new token, rather than just the creation of a Dapp.
+
+\section*{Acknowledgements}
+Thank you to those who participated in this project.
+
+% REFERENCE LIST
+\begin{thebibliography}{99}
+
+\bibitem{} \href{https://ethereum.org/en/whitepaper/}{Ethereum Whitepaper}
+\bibitem{} \href{https://github.com/tttienthinh/Cosette}{Github Link to the project}
+
+
+\end{thebibliography}
+
+%%% PRACE GENERIC LAYOUT; DO NOT CHANGE %%%
+\end{document}
+%%% END OF PRACE GENERIC LAYOUT %%%
